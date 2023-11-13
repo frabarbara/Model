@@ -2,7 +2,7 @@ package it.gammainnovation.librarymodel;
 
 import java.util.Date;
 
-class User{
+public class User{
     String uuid, taxIdCode, name, surname, gender, address, email, phoneNumber, password;
     Date birthday;
 

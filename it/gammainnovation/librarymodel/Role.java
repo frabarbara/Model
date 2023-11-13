@@ -1,6 +1,6 @@
 package it.gammainnovation.librarymodel;
 
-class Role{
+public class Role{
     public enum Id{
         ADM,
         WTR,

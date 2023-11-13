@@ -1,6 +1,6 @@
 package it.gammainnovation.librarymodel;
 
-class ReadingRoom {
+public class ReadingRoom {
 
     String id;
     int floor;
