@@ -8,7 +8,7 @@ public class Recipe {
 
     int id;
     private String name, description;
-    private int amtOrdered, monthsProposed;
+    private int amtOrdered, monthsProposed, id;
     private double curPrice;
     private boolean inMonthlyRotation;
     private Date lastUsed;

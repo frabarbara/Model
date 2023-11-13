@@ -4,7 +4,7 @@ class ReadingRoom {
 
     String id;
     Floor floor;
-    int num_seats;
+    int num_seats, id;
     String name;
 
     public String getId() {

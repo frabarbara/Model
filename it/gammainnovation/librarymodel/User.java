@@ -3,6 +3,7 @@ package it.gammainnovation.librarymodel;
 import java.util.Date;
 
 class User{
+    UUID uuid;
     String taxidcode;
     String name;
     String surname;

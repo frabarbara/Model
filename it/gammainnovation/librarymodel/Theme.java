@@ -1,9 +1,20 @@
 package it.gammainnovation.librarymodel;
 
-public enum Theme {
-    STORIA,
-    GEOGRAFIA,
-    SCIENZA,
-    ROMANZI,
-    SOCIOLOGIA
+public class Theme{
+    enum id{
+        "Sto",
+        "Geo",
+        "Sci",
+        "Rom",
+        "Soc"
+    }
+
+    enum Theme {
+        STORIA,
+        GEOGRAFIA,
+        SCIENZA,
+        ROMANZI,
+        SOCIOLOGIA
+    }
 }
+

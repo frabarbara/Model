@@ -2,21 +2,15 @@ package it.gammainnovation.librarymodel;
 
 public class Book {
 
-    String id, isbn, title;
+    String id;
+    String isbn;
+    String title;
     int edition;
     Author author;
     int pub_year;
     Theme theme;
     boolean borrowable;
     BookStatus status;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getIsbn() {
         return isbn;
@@ -38,47 +32,4 @@ public class Book {
         return edition;
     }
 
-    public void setEdition(int edition) {
-        this.edition = edition;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
-    public int getPub_year() {
-        return pub_year;
-    }
-
-    public void setPub_year(int pub_year) {
-        this.pub_year = pub_year;
-    }
-
-    public Theme getTheme() {
-        return theme;
-    }
-
-    public void setTheme(Theme theme) {
-        this.theme = theme;
-    }
-
-    public boolean isBorrowable() {
-        return borrowable;
-    }
-
-    public void setBorrowable(boolean borrowable) {
-        this.borrowable = borrowable;
-    }
-
-    public BookStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(BookStatus status) {
-        this.status = status;
-    }
 }

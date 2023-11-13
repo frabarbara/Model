@@ -1,7 +1,7 @@
 package it.gammainnovation.librarymodel;
 
 class Role{
-    String role;
+    String role, id;
 
     public String getRole() {
         return role;

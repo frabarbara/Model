@@ -5,6 +5,7 @@ public class Restaurant {
     /* #################### PROPERTIES #################### */
 
     private Floor floor;
+    private String id;
 
 
     /* #################### CONSTRUCTORS #################### */
