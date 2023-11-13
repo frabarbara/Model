@@ -6,6 +6,7 @@ public class Recipe {
 
     /* #################### PROPERTIES #################### */
 
+    int id;
     private String name, description;
     private int amtOrdered, monthsProposed;
     private double curPrice;
@@ -15,6 +16,14 @@ public class Recipe {
     /* #################### CONSTRUCTORS #################### */
     /* #################### PRIVATE METHODS #################### */
     /* #################### GETTERS / SETTERS #################### */
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

@@ -1,9 +1,19 @@
 package it.gammainnovation.librarymodel;
 
 class ReadingRoom {
+
+    String id;
     Floor floor;
     int num_seats;
     String name;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Floor getFloor() {
         return floor;
