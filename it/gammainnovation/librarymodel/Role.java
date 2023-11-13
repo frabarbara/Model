@@ -1,13 +1,32 @@
 package it.gammainnovation.librarymodel;
 
 class Role{
-    String role, id;
+    public enum Id{
+        ADM,
+        WTR,
+        RCP
+    }
+    public enum Description{
+        ADMIN,
+        WAITER,
+        RECEPTIONIST
+    }
+    Id id;
+    Description description;
 
-    public String getRole() {
-        return role;
+    public Id getId() {
+        return id;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setId(Id id) {
+        this.id = id;
+    }
+
+    public Description getDescription() {
+        return description;
+    }
+
+    public void setDescription(Description description) {
+        this.description = description;
     }
 }

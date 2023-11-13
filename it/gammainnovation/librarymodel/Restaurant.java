@@ -3,14 +3,47 @@ package it.gammainnovation.librarymodel;
 public class Restaurant {
 
     /* #################### PROPERTIES #################### */
-
-    private Floor floor;
     private String id;
-
+    private int floor;
+    int numSeats;
+    String name;
 
     /* #################### CONSTRUCTORS #################### */
     /* #################### PRIVATE METHODS #################### */
     /* #################### GETTERS / SETTERS #################### */
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    public int getNumSeats() {
+        return numSeats;
+    }
+
+    public void setNumSeats(int numSeats) {
+        this.numSeats = numSeats;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
     /* #################### PUBLIC METHODS #################### */
 
 }

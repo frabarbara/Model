@@ -1,21 +1,39 @@
 package it.gammainnovation.librarymodel;
-//qui da capire perchè è enum, non classe
 
 public class BookStatus{
-    enum id{
-        "Rdo",
-        "Ava",
-        "Bkd",
-        "Lnt",
-        "Due"
+    public enum Id{
+        RDO,
+        AVA,
+        BKD,
+        LNT,
+        DUE
     }
 
-    enum BookStatus {
+    public enum Description {
         READONLY,
         AVAILABLE,
         BOOKED,
         LENT,
         DUE
+    }
+
+    Id id;
+    Description description;
+
+    public Id getId() {
+        return id;
+    }
+
+    public void setId(Id id) {
+        this.id = id;
+    }
+
+    public Description getDescription() {
+        return description;
+    }
+
+    public void setDescription(Description description) {
+        this.description = description;
     }
 
 }

@@ -1,13 +1,7 @@
 package it.gammainnovation.librarymodel;
 
 public class Waiter {
-
-    String id;
-    String name;
-    String surname;
-    String phone_number;
-    String taxidcode;
-    String id;
+    String id, name, surname, phoneNumber, taxIdCode;
 
     public String getId() {
         return id;
@@ -33,19 +27,19 @@ public class Waiter {
         this.surname = surname;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getTaxidcode() {
-        return taxidcode;
+    public String getTaxIdCode() {
+        return taxIdCode;
     }
 
-    public void setTaxidcode(String taxidcode) {
-        this.taxidcode = taxidcode;
+    public void setTaxIdCode(String taxIdCode) {
+        this.taxIdCode = taxIdCode;
     }
 }

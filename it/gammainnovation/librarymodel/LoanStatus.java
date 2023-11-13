@@ -1,19 +1,21 @@
 package it.gammainnovation.librarymodel;
 
-public class Theme{
+public class LoanStatus {
+
     public enum Id{
-        STO,
-        GEO,
-        SCI,
-        ROM,
-        SOC
+        BKD,
+        ACT,
+        DUE,
+        NTF,
+        CMP
     }
-    public enum Description {
-        STORIA,
-        GEOGRAFIA,
-        SCIENZA,
-        ROMANZI,
-        SOCIOLOGIA
+
+    public enum Description{
+        BOOKED,
+        ACTIVE,
+        DUE,
+        NOTIFIED,
+        COMPLETE
     }
 
     Id id;
@@ -35,4 +37,3 @@ public class Theme{
         this.description = description;
     }
 }
-

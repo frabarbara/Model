@@ -2,16 +2,17 @@ package it.gammainnovation.librarymodel;
 
 import java.util.Date;
 
-class User{
-    String uuid, taxIdCode, name, surname, gender, address, email, phoneNumber, password;
+public class Employee {
+
+    String code, taxIdCode, name, surname, gender, address, email, phoneNumber, password, role;
     Date birthday;
 
-    public String getUuid() {
-        return uuid;
+    public String getCode() {
+        return code;
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getTaxIdCode() {
@@ -76,6 +77,14 @@ class User{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public Date getBirthday() {

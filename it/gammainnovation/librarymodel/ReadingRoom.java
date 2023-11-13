@@ -3,8 +3,8 @@ package it.gammainnovation.librarymodel;
 class ReadingRoom {
 
     String id;
-    Floor floor;
-    int num_seats, id;
+    int floor;
+    int num_seats;
     String name;
 
     public String getId() {
@@ -15,11 +15,11 @@ class ReadingRoom {
         this.id = id;
     }
 
-    public Floor getFloor() {
+    public int getFloor() {
         return floor;
     }
 
-    public void setFloor(Floor floor) {
+    public void setFloor(int floor) {
         this.floor = floor;
     }
 
