@@ -5,49 +5,42 @@ public class Role{
     /* #################### PROPERTIES #################### */
 
     public static final String
-            ADM = "ADMIN",
-            WTR = "WAITER",
-            RCP = "RECEPTIONIST";
+            ADM = "ADM",
+            WTR = "WTR",
+            RCP = "RCP";
 
-    private String role;
+    private String id;
+    private String description;
 
     /* #################### CONSTRUCTORS #################### */
 
-    public Role(String role) {
-        if (
-                role.compareTo(Role.ADM) != 0
-                        && role.compareTo("ADM") != 0
-                        && role.compareTo(Role.WTR) != 0
-                        && role.compareTo("WTR") != 0
-                        && role.compareTo(Role.RCP) != 0
-                        && role.compareTo("RCP") != 0
-        ) {
+    public Role(String id) {
+        if (id.compareTo(Role.ADM) == 0) this.description = "ADMIN";
+        else if (id.compareTo(Role.WTR) == 0) this.description = "WAITER";
+        else if (id.compareTo(Role.RCP) == 0) this.description = "RECEPTIONIST";
+        else {
             throw new IllegalArgumentException("[Role:CONSTRUCTOR] ERROR: role must be one of the following:\n"
                     + Role.ADM + " (Role.ADM)\n"
-                    + "ADM\n"
                     + Role.WTR + " (Role.WTR)\n"
-                    + "WTR\n"
                     + Role.RCP + " (Role.RCP)\n"
-                    + "RCP\n"
             );
         }
 
-        this.role = role;
+        this.id = id;
     }
 
     /* #################### PRIVATE METHODS #################### */
     /* #################### GETTERS / SETTERS #################### */
 
-    public String getRole() {
-        return role;
+    public String getId() {
+        return id;
     }
 
-    public void setRole(String role) {
-        if (
-                role.compareTo(Role.ADM) != 0
-                        && role.compareTo(Role.WTR) != 0
-                        && role.compareTo(Role.RCP) != 0
-        ) {
+    public void setId(String id) {
+        if (id.compareTo(Role.ADM) == 0) this.description = "ADMIN";
+        else if(id.compareTo(Role.WTR) == 0) this.description = "WAITER";
+        else if(id.compareTo(Role.RCP) == 0) this.description = "RECEPTIONIST";
+        else {
             throw new IllegalArgumentException("[Role.setRole] ERROR: role must be one of the following:\n"
                     + Role.ADM + " (Role.ADM)\n"
                     + Role.WTR + " (Role.WTR)\n"
@@ -55,6 +48,14 @@ public class Role{
             );
         }
 
-        this.role = role;
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

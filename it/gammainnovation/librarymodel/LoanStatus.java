@@ -5,61 +5,49 @@ public class LoanStatus {
     /* #################### PROPERTIES #################### */
 
     public static final String
-            BKD = "BOOKED",
-            ACT = "ACTIVE",
+            BKD = "BKD",
+            ACT = "ACT",
             DUE = "DUE",
-            NTF = "NOTIFIED",
-            CMP = "COMPLETE";
+            NTF = "NTF",
+            CMP = "CMP";
 
-    private String status;
+    private String id, description;
 
     /* #################### CONSTRUCTORS #################### */
 
-    public LoanStatus(String status) {
-        if (
-                status.compareTo(LoanStatus.BKD) != 0
-                        && status.compareTo("BKD") != 0
-                        && status.compareTo(LoanStatus.ACT) != 0
-                        && status.compareTo("ACT") != 0
-                        && status.compareTo(LoanStatus.DUE) != 0
-                        && status.compareTo("DUE") != 0
-                        && status.compareTo(LoanStatus.NTF) != 0
-                        && status.compareTo("NTF") != 0
-                        && status.compareTo(LoanStatus.CMP) != 0
-                        && status.compareTo("CMP") != 0
-        ) {
+    public LoanStatus(String id) {
+        if (id.compareTo(LoanStatus.BKD) == 0) this.description = "BOOKED";
+        else if (id.compareTo(LoanStatus.ACT) == 0) this.description = "ACTIVE";
+        else if (id.compareTo(LoanStatus.DUE) == 0) this.description = "DUE";
+        else if (id.compareTo(LoanStatus.NTF) == 0) this.description = "NOTIFIED";
+        else if (id.compareTo(LoanStatus.CMP) == 0) this.description = "COMPLETE";
+        else {
             throw new IllegalArgumentException("[LoanStatus:CONSTRUCTOR] ERROR: status must be one of the following:\n"
                     + LoanStatus.BKD + " (LoanStatus.BKD)\n"
-                    + "BKD\n"
                     + LoanStatus.ACT + " (LoanStatus.ACT)\n"
-                    + "ACT\n"
                     + LoanStatus.DUE + " (LoanStatus.DUE)\n"
-                    + "DUE\n"
                     + LoanStatus.NTF + " (LoanStatus.NTF)\n"
-                    + "NTF\n"
                     + LoanStatus.CMP + " (LoanStatus.CMP)\n"
-                    + "CMP\n"
             );
         }
 
-        this.status = status;
+        this.id = id;
     }
 
     /* #################### PRIVATE METHODS #################### */
     /* #################### GETTERS / SETTERS #################### */
 
-    public String getStatus() {
-        return status;
+    public String getId() {
+        return id;
     }
 
-    public void setStatus(String status) {
-        if (
-                status.compareTo(LoanStatus.BKD) != 0
-                        && status.compareTo(LoanStatus.ACT) != 0
-                        && status.compareTo(LoanStatus.DUE) != 0
-                        && status.compareTo(LoanStatus.NTF) != 0
-                        && status.compareTo(LoanStatus.CMP) != 0
-        ) {
+    public void setId(String id) {
+        if (id.compareTo(LoanStatus.BKD) == 0) this.description = "BOOKED";
+        else if (id.compareTo(LoanStatus.ACT) == 0) this.description = "ACTIVE";
+        else if (id.compareTo(LoanStatus.DUE) == 0) this.description = "DUE";
+        else if (id.compareTo(LoanStatus.NTF) == 0) this.description = "NOTIFIED";
+        else if (id.compareTo(LoanStatus.CMP) == 0) this.description = "COMPLETE";
+        else {
             throw new IllegalArgumentException("[LoanStatus:setStatus] ERROR: status must be one of the following:\n"
                     + LoanStatus.BKD + " (LoanStatus.BKD)\n"
                     + LoanStatus.ACT + " (LoanStatus.ACT)\n"
@@ -69,6 +57,14 @@ public class LoanStatus {
             );
         }
 
-        this.status = status;
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
