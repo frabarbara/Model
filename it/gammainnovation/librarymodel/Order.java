@@ -4,8 +4,8 @@ import java.time.LocalDateTime;
 
 public class Order {
     int id;
-    String waiterId;
-    int dailyMenu;
+    Waiter waiter;
+    DailyMenu dailyMenu;
     int fc1Amt, fc2Amt, fc3Amt, sc1Amt, sc2Amt, sc3Amt, fruAmt, desAmt;
     float totBill;
     String notes;
@@ -19,19 +19,19 @@ public class Order {
         this.id = id;
     }
 
-    public String getWaiterId() {
-        return waiterId;
+    public Waiter getWaiter() {
+        return waiter;
     }
 
-    public void setWaiterId(String waiterId) {
-        this.waiterId = waiterId;
+    public void setWaiter(Waiter waiter) {
+        this.waiter = waiter;
     }
 
-    public int getDailyMenu() {
+    public DailyMenu getDailyMenu() {
         return dailyMenu;
     }
 
-    public void setDailyMenu(int dailyMenu) {
+    public void setDailyMenu(DailyMenu dailyMenu) {
         this.dailyMenu = dailyMenu;
     }
 

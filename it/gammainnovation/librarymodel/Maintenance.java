@@ -3,16 +3,16 @@ package it.gammainnovation.librarymodel;
 import java.util.Date;
 
 public class Maintenance {
-    String roomId;
+    ReadingRoom room;
     Date startMaintenance;
     int duration, id;
 
-    public String getRoomId() {
-        return roomId;
+    public ReadingRoom getRoom() {
+        return room;
     }
 
-    public void setRoomId(String roomId) {
-        this.roomId = roomId;
+    public void setRoom(ReadingRoom room) {
+        this.room = room;
     }
 
     public Date getStartMaintenance() {

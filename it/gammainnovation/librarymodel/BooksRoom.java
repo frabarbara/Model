@@ -2,22 +2,22 @@ package it.gammainnovation.librarymodel;
 
 public class BooksRoom {
     String id;
-    int floorId;
-    Theme.Id theme;
+    Floor floor;
+    Theme theme;
 
-    public int getFloor() {
-        return floorId;
+    public Floor getFloor() {
+        return floor;
     }
 
-    public void setFloor(int floor) {
-        this.floorId = floor;
+    public void setFloor(Floor floor) {
+        this.floor = floor;
     }
 
-    public Theme.Id getTheme() {
+    public Theme getTheme() {
         return theme;
     }
 
-    public void setTheme(Theme.Id theme) {
+    public void setTheme(Theme theme) {
         this.theme = theme;
     }
 }

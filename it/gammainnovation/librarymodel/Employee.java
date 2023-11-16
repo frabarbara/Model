@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class Employee {
 
-    String code, taxIdCode, name, surname, gender, address, email, phoneNumber, password, role;
+    String code, taxIdCode, name, surname, gender, address, email, phoneNumber, password;
+    Role role;
     Date birthday;
 
     public String getCode() {
@@ -79,11 +80,11 @@ public class Employee {
         this.password = password;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 

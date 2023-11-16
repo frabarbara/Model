@@ -2,7 +2,8 @@ package it.gammainnovation.librarymodel;
 
 public class WaiterShift {
     int id;
-    String restaurantShift, waiter;
+    RestaurantShift restaurantShift;
+    Waiter waiter;
 
     public int getId() {
         return id;
@@ -12,19 +13,19 @@ public class WaiterShift {
         this.id = id;
     }
 
-    public String getRestaurantShift() {
+    public RestaurantShift getRestaurantShift() {
         return restaurantShift;
     }
 
-    public void setRestaurantShift(String restaurantShift) {
+    public void setRestaurantShift(RestaurantShift restaurantShift) {
         this.restaurantShift = restaurantShift;
     }
 
-    public String getWaiter() {
+    public Waiter getWaiter() {
         return waiter;
     }
 
-    public void setWaiter(String waiter) {
+    public void setWaiter(Waiter waiter) {
         this.waiter = waiter;
     }
 }

@@ -2,7 +2,7 @@ package it.gammainnovation.librarymodel;
 
 public class Reception {
     String name, id;
-    int floor;
+    Floor floor;
 
     public String getName() {
         return name;
@@ -20,11 +20,11 @@ public class Reception {
         this.id = id;
     }
 
-    public int getFloor() {
+    public Floor getFloor() {
         return floor;
     }
 
-    public void setFloor(int floor) {
+    public void setFloor(Floor floor) {
         this.floor = floor;
     }
 }

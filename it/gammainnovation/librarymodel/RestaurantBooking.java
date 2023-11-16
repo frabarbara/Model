@@ -1,8 +1,14 @@
 package it.gammainnovation.librarymodel;
 
+import java.util.Date;
+
 public class RestaurantBooking {
+
     int id;
-    String userId, restaurantId, turnId;
+    User user;
+    Restaurant restaurant;
+    RestaurantTurn turn;
+    Date day;
 
     public int getId() {
         return id;
@@ -12,27 +18,35 @@ public class RestaurantBooking {
         this.id = id;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getRestaurantId() {
-        return restaurantId;
+    public Restaurant getRestaurant() {
+        return restaurant;
     }
 
-    public void setRestaurantId(String restaurantId) {
-        this.restaurantId = restaurantId;
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 
-    public String getTurnId() {
-        return turnId;
+    public RestaurantTurn getTurn() {
+        return turn;
     }
 
-    public void setTurnId(String turnId) {
-        this.turnId = turnId;
+    public void setTurn(RestaurantTurn turn) {
+        this.turn = turn;
+    }
+
+    public Date getDay() {
+        return day;
+    }
+
+    public void setDay(Date day) {
+        this.day = day;
     }
 }

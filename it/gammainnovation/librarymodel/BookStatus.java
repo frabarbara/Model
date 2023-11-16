@@ -1,39 +1,74 @@
 package it.gammainnovation.librarymodel;
 
 public class BookStatus{
-    public enum Id{
-        RDO,
-        AVA,
-        BKD,
-        LNT,
-        DUE
+
+    /* #################### PROPERTIES #################### */
+
+    public static final String
+            RDO = "READONLY",
+            AVA = "AVAILABLE",
+            BKD = "BOOKED",
+            LNT = "LENT",
+            DUE = "DUE";
+
+    private String status;
+
+    /* #################### CONSTRUCTORS #################### */
+
+    public BookStatus(String status) {
+        if (
+                status.compareTo(BookStatus.RDO) != 0
+                        && status.compareTo("RDO") != 0
+                        && status.compareTo(BookStatus.AVA) != 0
+                        && status.compareTo("AVA") != 0
+                        && status.compareTo(BookStatus.BKD) != 0
+                        && status.compareTo("BKD") != 0
+                        && status.compareTo(BookStatus.LNT) != 0
+                        && status.compareTo("LNT") != 0
+                        && status.compareTo(BookStatus.DUE) != 0
+                        && status.compareTo("DUE") != 0
+        ) {
+            throw new IllegalArgumentException("[BookStatus:CONSTRUCTOR] ERROR: status must be one of the following:\n"
+                    + BookStatus.RDO + " (BookStatus.RDO)\n"
+                    + "RDO\n"
+                    + BookStatus.AVA + " (BookStatus.AVA)\n"
+                    + "AVA\n"
+                    + BookStatus.BKD + " (BookStatus.BKD)\n"
+                    + "BKD\n"
+                    + BookStatus.LNT + " (BookStatus.LNT)\n"
+                    + "LNT\n"
+                    + BookStatus.DUE + " (BookStatus.DUE)\n"
+                    + "DUE\n"
+            );
+        }
+
+        this.status = status;
     }
 
-    public enum Description {
-        READONLY,
-        AVAILABLE,
-        BOOKED,
-        LENT,
-        DUE
+    /* #################### PRIVATE METHODS #################### */
+    /* #################### GETTERS / SETTERS #################### */
+
+    public String getStatus() {
+        return status;
     }
 
-    Id id;
-    Description description;
+    public void setStatus(String status) {
+        if (
+                status.compareTo(BookStatus.RDO) != 0
+                        && status.compareTo(BookStatus.AVA) != 0
+                        && status.compareTo(BookStatus.BKD) != 0
+                        && status.compareTo(BookStatus.LNT) != 0
+                        && status.compareTo(BookStatus.DUE) != 0
+        ) {
+            throw new IllegalArgumentException("[BookStatus:setStatus] ERROR: status must be one of the following:\n"
+                    + BookStatus.RDO + " (BookStatus.RDO)\n"
+                    + BookStatus.AVA + " (BookStatus.AVA)\n"
+                    + BookStatus.BKD + " (BookStatus.BKD)\n"
+                    + BookStatus.LNT + " (BookStatus.LNT)\n"
+                    + BookStatus.DUE + " (BookStatus.DUE)\n"
+            );
+        }
 
-    public Id getId() {
-        return id;
+        this.status = status;
     }
-
-    public void setId(Id id) {
-        this.id = id;
-    }
-
-    public Description getDescription() {
-        return description;
-    }
-
-    public void setDescription(Description description) {
-        this.description = description;
-    }
-
 }

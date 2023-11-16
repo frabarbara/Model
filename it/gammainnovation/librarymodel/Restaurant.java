@@ -4,7 +4,7 @@ public class Restaurant {
 
     /* #################### PROPERTIES #################### */
     private String id;
-    private int floor;
+    private Floor floor;
     int numSeats;
     String name;
 
@@ -19,11 +19,11 @@ public class Restaurant {
         this.id = id;
     }
 
-    public int getFloor() {
+    public Floor getFloor() {
         return floor;
     }
 
-    public void setFloor(int floor) {
+    public void setFloor(Floor floor) {
         this.floor = floor;
     }
 

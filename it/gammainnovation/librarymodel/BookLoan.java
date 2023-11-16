@@ -4,7 +4,9 @@ import java.util.Date;
 
 public class BookLoan {
     int id;
-    String userId, bookId, status;
+    User user;
+    Book book;
+    LoanStatus status;
     Date startLoan, endLoan;
 
     public int getId() {
@@ -15,27 +17,27 @@ public class BookLoan {
         this.id = id;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getBookId() {
-        return bookId;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public String getStatus() {
+    public LoanStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(LoanStatus status) {
         this.status = status;
     }
 
